@@ -26,37 +26,37 @@ def play_round():
     cpu = get_cpu_input()
     player = get_player_input()
 
-    if cpu == player:
+    if (cpu == player):
         print 'CPU chose the same. You Tied'
         play_round()
-    elif(cpu == 1)and(player == 2 or 5):
+    elif(cpu == 1)and(player in [2,5]):
         print'CPU chose ROCK. You Win'
         result = 'win'
-    elif(cpu == 1)and(player == 3 or 4):
+    elif(cpu == 1)and(player in [3,4]):
         print'CPU chose ROCK. You Lose'
         result = 'lose'
-    elif(cpu == 2)and(player == 3 or 4):
+    elif(cpu == 2)and(player in [3,4]):
         print'CPU chose PAPER. You Win'
         result = 'win'
-    elif(cpu == 2)and(player == 1 or 5):
+    elif(cpu == 2)and(player in [1,5]):
         print'CPU chose PAPER. You Lose'
         result = 'lose'
-    elif(cpu == 3)and(player == 1 or 5):
+    elif(cpu == 3)and(player in [1,5]):
         print'CPU chose SCISSORS. You Win'
         result = 'win'
-    elif(cpu == 3)and(player == 2 or 4):
+    elif(cpu == 3)and(player in [2,4]):
         print'CPU chose SCISSORS. You Lose'
         result = 'lose'
-    elif(cpu == 4)and(player == 3 or 1):
+    elif(cpu == 4)and(player in [3,1]):
         print'CPU chose LIZARD. You Win'
         result = 'win'
-    elif(cpu == 4)and(player == 2 or 5):
+    elif(cpu == 4)and(player in [2,5]):
         print'CPU chose LIZARD. You Lose'
         result = 'lose'
-    elif(cpu == 5)and(player == 2 or 4):
+    elif(cpu == 5)and(player in [2,4]):
         print'CPU chose SPOCK. You Win'
         result = 'win'
-    elif(cpu == 5)and(player == 1 or 3):
+    elif(cpu == 5)and(player in [1,3]):
         print'CPU chose SPOCK. You Lose'
         result = 'lose'
     return result
